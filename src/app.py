@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.figure_factory as ff
 
-df = pd.read_csv('../datasets/athlete_events.csv')
-region_df = pd.read_csv('../datasets/noc_regions.csv')
+df = pd.read_csv('datasets/athlete_events.csv')
+region_df = pd.read_csv('datasets/noc_regions.csv')
 
 df = preprocess.preprocess(df, region_df)
 
 st.sidebar.title("Olympics Analysis")
-st.sidebar.image('../images/Olympics.png')
+st.sidebar.image('images/Olympics.png')
 user_menu = st.sidebar.radio(
     'Select an Option',
     ('Medal Tally', 'Overall Analysis', 'Country-wise Analysis', 'Athlete wise Analysis')
